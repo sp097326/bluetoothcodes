@@ -8,15 +8,16 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.*;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -146,8 +147,8 @@ public class DeviceListActivity extends AppCompatActivity {
         });
 
         //initialize the ArrayAdapter for paired devices and new devices
-        mPairedDevicesArrayAdapter = new ArrayAdapter<String>(this, R.id.paired_devices);
-        mNewDevicesArrayAdapter = new ArrayAdapter<String>(this,R.id.new_devices);
+        mPairedDevicesArrayAdapter = new ArrayAdapter<String>(this, R.layout.device_name);
+        mNewDevicesArrayAdapter = new ArrayAdapter<String>(this,R.layout.device_name);
 
         //find and setup the list of paired devices
         ListView pairedListView = (ListView) findViewById(R.id.paired_devices);

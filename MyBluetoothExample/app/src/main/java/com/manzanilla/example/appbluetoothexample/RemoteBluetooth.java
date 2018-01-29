@@ -40,12 +40,12 @@ public class RemoteBluetooth extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.main);
-        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
-
+        //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
+/*
         mTitle = (TextView) findViewById(R.id.title_left_text);
         mTitle.setText("RemoteBluetooth");
         mTitle = (TextView) findViewById(R.id.title_left_text); //??
-
+*/
         mBluetoothAdapter = mBluetoothAdapter.getDefaultAdapter();
 
         if (mBluetoothAdapter == null) {
